@@ -1,0 +1,15 @@
+script:
+- |-
+  git config user.name "sgeto"
+  git config user.email "autostart.ini@gmail.com"
+  git remote remove origin
+  git remote add origin https://$GITHUB_API_KEY@github.com/sgeto/ettercap-wiki.git > /dev/null 2>&1
+  git remote add upstream https://$GITHUB_API_KEY@github.com/sgeto/ettercap-wiki.wiki.git > /dev/null 2>&1
+  git fetch origin
+  git fetch upstream
+  git merge upstream/master --no-edit
+  git push origin HEAD:master > /dev/null 2>&1
+  git push upstream HEAD:master > /dev/null 2>&1
+env:
+  matrix:
+    secure: Kw5kvAZjbO2AN6XIOlXua2+uUqeTM8k8NX5UCuLAErlSPkbCM0Weba4dyZcs+lgvSaRUQr5Q99T8cK17vGOq3nqahjvlYJ7yfvF+s9yrpdyZfmKqQw8M4ccudgQ0KztWDSzkUkrZcBCOBOAXitks+cIqBTA0ZRSn4CTgPKNzYXbqqdNwAO/LK79Ngm1w1oUKmxJcs3eSUZeaeBxnbtX9NIOKLFbBI3jTLT8ZSh6u/x+PXmAHT+yR9OaUflfkxxNKRIVH/vRoazF74QCUUwq2HBED+x47Fowein7lEOBz8gf1RKfD7RnuZr5W1WIsQU7KsCTtcoC/N7vw8Es3ioIcpySq2du1frmOSALmQoz/kW1MfRUj48hMknJUfP01RMN7ubwDwqAV7qAoggObqoCnlETQxGdCn7m59ep59wEmL+N78pjr+W29xaoytzzUo1CfqHKbj/NOtgulFv1/lFrhoPm52asNMfkU7ycvtUNPDx14voCrpnocM0NZzxbHPGJ5TLVc6eVqZYXL4PQbeuLowJj0iSoRCxZOzPrZ/fKXDlF4AMW3Rrhx7qn2Xot1GouFaizgYxfRiPMUyVKffZmeDqz/F/2msDaXkR20Yw7b7Fb+oCh+TvbCnwfjoizAYBVnRO59kWqCNnZZk7Hez+ttAJcy9pPBelmX3plJt9tMkqw=

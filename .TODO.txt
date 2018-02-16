@@ -1,0 +1,13 @@
+# see http://www.growingwiththeweb.com/2016/07/enabling-pull-requests-on-github-wikis.html
+
+More robust two-way syncing using periodic builds#
+If you’ve made it this far, simple two-way syncing is complete and any commits that are pushed to the -wiki repo will be pushed to the project’s wiki page after merging in the .wiki repo.
+
+There’s one more improvement that can be made. Currently if many commits are made through the /wiki web UI then the -wiki repo will become stale, increasing the likelyhood of merge conflicts that require manual intervention to resolve. To counter this, periodic builds can be setup so that the sync job will run periodically. You’ll need to loop in another service such as Nightli.es for Travis CI or VSTS to accomplish this since Travis CI does not support periodic builds.
+
+This last step may not be necessary though if there aren’t many contributions made through the web UI.
+
+Maybe add a daily cron job via travis web-UI?
+At least add a notice somewhere...
+
+-----------

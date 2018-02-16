@@ -1,4 +1,4 @@
-# Welcome to *Etterwiki*!
+# Welcome to *Etterwiki*! [![Build Status](https://travis-ci.org/sgeto/ettercap-wiki.svg?branch=master)](https://travis-ci.org/sgeto/ettercap-wiki)
 Ettercap is called a swiss knife for man-in-the-middle attacks.
 It provides lots of features which go beyond the common knowledge of many people knowing about **ettercap**.
 
